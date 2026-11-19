@@ -11,7 +11,7 @@
 - [ ] Web Accessibility Audit Report
 
 ## extra things that need to be done
-- [ ] choosing heads
+- [x] choosing heads
 - [ ] creating css file
 - [ ] figure out what goes for company about us
 - [ ] css styling for heads (round and smaller)
