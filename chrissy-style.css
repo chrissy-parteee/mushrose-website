@@ -90,3 +90,28 @@ table td{
 .carousel-btn.next {
   right: 8px;
 }
+
+ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #5c5c5c;
+}
+
+ul li{
+    float: left;
+}
+
+ul li a{
+    display: block;
+    color: whitesmoke;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+ul li a:hover{
+    background-color: whitesmoke;
+    color: black;
+}
