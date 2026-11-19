@@ -90,3 +90,8 @@ table td{
 .carousel-btn.next {
   right: 8px;
 }
+
+#logo1{
+    width: 250px;
+    height: auto;
+}
