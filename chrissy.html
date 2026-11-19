@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Christin Partee</title>
     <link rel="stylesheet" href="chrissy-style.css">
+    <script src="carousel.js" defer></script>
 </head>
 <body>
     <a href="home.html">Home</a>
@@ -29,35 +30,40 @@
 
     <h2>Portfolio</h2>
     <!-- want to be able to slide through table -->
-    <table>
-        <tbody>
-            <tr>
-                <td class="card-title">THING1</td>
-                <td class="card-date">date</td>
-                <td class="card-desc">explain</td>
-            </tr>
-            <tr>
-                <td class="card-title">THING2</td>
-                <td class="card-date">date</td>
-                <td class="card-desc">explain</td>
-            </tr>
-            <tr>
-                <td class="card-title">THING3</td>
-                <td class="card-date">date</td>
-                <td class="card-desc">explain</td>
-            </tr>
-            <tr>
-                <td class="card-title">THING4</td>
-                <td class="card-date">date</td>
-                <td class="card-desc">explain</td>
-            </tr>
-            <tr>
-                <td class="card-title">THING5</td>
-                <td class="card-date">date</td>
+     <div class="carousel-wrap">
+        <button type="button" class="carousel-btn prev" aria-label="Previous Card">&#8592;</button>
+
+         <table>
+             <tbody>
+                 <tr>
+                     <td class="card-title">THING1</td>
+                     <td class="card-date">date</td>
+                     <td class="card-desc">explain</td>
+                    </tr>
+                    <tr>
+                        <td class="card-title">THING2</td>
+                        <td class="card-date">date</td>
+                        <td class="card-desc">explain</td>
+                    </tr>
+                    <tr>
+                        <td class="card-title">THING3</td>
+                        <td class="card-date">date</td>
+                        <td class="card-desc">explain</td>
+                    </tr>
+                    <tr>
+                        <td class="card-title">THING4</td>
+                        <td class="card-date">date</td>
+                        <td class="card-desc">explain</td>
+                    </tr>
+                    <tr>
+                        <td class="card-title">THING5</td>
+                        <td class="card-date">date</td>
                 <td class="card-desc">explain</td>
             </tr>
         </tbody>
     </table>
-
+    <button type="button" class="carousel-btn next" aria-label="Next Card">&#8594;</button>
+</div>
+    
 </body>
 </html>
