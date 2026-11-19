@@ -1,0 +1,46 @@
+table{
+    display: block;
+    width: 100%;
+    border: none;
+}
+
+table tbody{
+    display: flex;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    padding-bottom: 12px;
+}
+
+table tr{
+    flex: 0 0 280px;
+    scroll-snap-align: start;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid black;
+    border-radius: 8px;
+    padding: 16px;
+    min-height: 250px;
+    background-color: whitesmoke;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+table td{
+    display: block;
+    margin-bottom: 8px;
+}
+
+.card-title {
+    font-weight: bold;
+    font-size: 1.2rem;
+    text-align: center;
+}
+
+.card-date {
+    color: grey;
+    font-size: 0.9rem;
+    text-align: center;
+    font-style: italic;
+}
