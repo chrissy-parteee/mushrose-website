@@ -1,0 +1,301 @@
+:root {
+    --deep-burgundy: #710912;
+    --midnight-black: #0D0D0D;
+    --antique-gold: #C28D39;
+    --dark-espresso: #362822;
+    --warm-champagne: #EFE5D2;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--midnight-black);
+    color: var(--warm-champagne);
+    font-family: Georgia, 'Times New Roman', serif;
+    max-width: 850px;
+    margin: 0 auto;
+    padding: 2rem 1.5rem 4rem;
+    line-height: 1.6;
+}
+
+/* Top Navigation */
+.top-nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid var(--dark-espresso);
+    margin-bottom: 2.5rem;
+}
+
+.top-nav a {
+    color: var(--antique-gold);
+    text-decoration: none;
+    font-size: 1.1rem;
+    letter-spacing: 0.5px;
+    transition: color 0.2s ease;
+}
+
+.top-nav a:hover {
+    color: var(--warm-champagne);
+}
+
+#logo1 {
+    height: 60px;
+    width: auto;
+    display: block;
+}
+
+/* Profile Header & Picture */
+.profile-header {
+    display: flex;
+    align-items: center;
+    gap: 1.75rem;
+    background-color: var(--dark-espresso);
+    border: 2px solid var(--antique-gold);
+    border-radius: 12px;
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6);
+}
+
+#profile-pic {
+    width: 125px;
+    height: 125px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 3px solid var(--antique-gold);
+    outline: 3px solid var(--deep-burgundy);
+    flex-shrink: 0;
+}
+
+.profile-title h1 {
+    margin: 0 0 0.35rem 0;
+    color: var(--warm-champagne);
+    font-size: 2.1rem;
+}
+
+.profile-title h4 {
+    margin: 0;
+    color: var(--antique-gold);
+    font-weight: normal;
+    font-size: 1rem;
+    letter-spacing: 0.5px;
+}
+
+/* Section Headings & Bio Blocks */
+h2 {
+    color: var(--antique-gold);
+    border-bottom: 2px solid var(--deep-burgundy);
+    padding-bottom: 0.3rem;
+    margin-top: 2rem;
+    font-size: 1.5rem;
+}
+
+pre {
+    background-color: rgba(54, 40, 34, 0.45);
+    border-left: 4px solid var(--deep-burgundy);
+    padding: 1rem 1.25rem;
+    border-radius: 0 8px 8px 0;
+    color: var(--warm-champagne);
+    font-family: Georgia, 'Times New Roman', serif;
+    font-size: 1rem;
+    white-space: pre-wrap;
+    margin: 0.75rem 0 1.5rem;
+}
+
+/* Portfolio Carousel */
+.carousel-wrap {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    background-color: var(--dark-espresso);
+    border: 1px solid var(--antique-gold);
+    border-radius: 10px;
+    padding: 1.25rem;
+    margin-top: 1rem;
+}
+
+.carousel-wrap table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.carousel-wrap td {
+    padding: 0.5rem 0.75rem;
+    vertical-align: middle;
+}
+
+.card-title {
+    color: var(--antique-gold);
+    font-weight: bold;
+    font-size: 1.15rem;
+    width: 32%;
+}
+
+.card-date {
+    color: var(--warm-champagne);
+    background-color: var(--deep-burgundy);
+    border-radius: 4px;
+    text-align: center;
+    font-size: 0.85rem;
+    width: 14%;
+}
+
+.card-desc {
+    color: var(--warm-champagne);
+    font-size: 0.95rem;
+}
+
+.carousel-btn {
+    background-color: var(--deep-burgundy);
+    color: var(--warm-champagne);
+    border: 1px solid var(--antique-gold);
+    border-radius: 6px;
+    padding: 0.5rem 0.85rem;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+.carousel-btn:hover {
+    background-color: var(--antique-gold);
+    color: var(--midnight-black);
+}
+
+.carousel-btn:active {
+    transform: scale(0.95);
+}
+
+/* Crawling Ladybug on the Right Side */
+.ladybug {
+    position: fixed;
+    right: 22px;
+    bottom: -30px;
+    width: 24px;
+    height: 30px;
+    z-index: 999;
+    pointer-events: none;
+    animation: crawlRightSide 18s ease-in-out infinite;
+}
+
+.ladybug-head {
+    width: 12px;
+    height: 8px;
+    background-color: var(--midnight-black);
+    border: 1px solid var(--antique-gold);
+    border-radius: 50% 50% 0 0;
+    margin: 0 auto -2px;
+    position: relative;
+}
+
+/* Tiny antennae */
+.ladybug-head::before,
+.ladybug-head::after {
+    content: "";
+    position: absolute;
+    top: -4px;
+    width: 2px;
+    height: 5px;
+    background-color: var(--antique-gold);
+}
+.ladybug-head::before { left: 2px; transform: rotate(-25deg); }
+.ladybug-head::after { right: 2px; transform: rotate(25deg); }
+
+.ladybug-body {
+    width: 22px;
+    height: 24px;
+    background-color: var(--deep-burgundy);
+    border: 1.5px solid var(--antique-gold);
+    border-radius: 50%;
+    margin: 0 auto;
+    position: relative;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.7);
+}
+
+/* Center wing split line */
+.ladybug-body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    width: 1.5px;
+    background-color: var(--midnight-black);
+    transform: translateX(-50%);
+}
+
+/* Ladybug spots */
+.ladybug-body::after {
+    content: "";
+    position: absolute;
+    width: 4px;
+    height: 4px;
+    background-color: var(--midnight-black);
+    border-radius: 50%;
+    top: 5px;
+    left: 4px;
+    box-shadow:
+        10px 0 0 var(--midnight-black),
+        1px 8px 0 var(--midnight-black),
+        9px 8px 0 var(--midnight-black);
+}
+
+/* Crawling motion with subtle wiggle and turn-around */
+@keyframes crawlRightSide {
+    0% {
+        bottom: 5vh;
+        transform: translateX(0) rotate(0deg);
+    }
+    12% {
+        bottom: 28vh;
+        transform: translateX(-6px) rotate(-8deg);
+    }
+    25% {
+        bottom: 52vh;
+        transform: translateX(4px) rotate(6deg);
+    }
+    40% {
+        bottom: 78vh;
+        transform: translateX(-4px) rotate(-5deg);
+    }
+    48% {
+        bottom: 85vh;
+        transform: translateX(0) rotate(0deg);
+    }
+    52% {
+        bottom: 85vh;
+        transform: translateX(0) rotate(180deg);
+    }
+    68% {
+        bottom: 58vh;
+        transform: translateX(5px) rotate(172deg);
+    }
+    84% {
+        bottom: 26vh;
+        transform: translateX(-5px) rotate(188deg);
+    }
+    96% {
+        bottom: 5vh;
+        transform: translateX(0) rotate(180deg);
+    }
+    100% {
+        bottom: 5vh;
+        transform: translateX(0) rotate(360deg);
+    }
+}
+
+/* Responsive tweak for smaller screens */
+@media (max-width: 600px) {
+    .profile-header {
+        flex-direction: column;
+        text-align: center;
+    }
+    .ladybug {
+        right: 8px;
+    }
+}
