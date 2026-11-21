@@ -152,23 +152,7 @@ pre {
 }
 
 .carousel-btn {
-    background-color: var(--deep-burgundy);
-    color: var(--warm-champagne);
-    border: 1px solid var(--antique-gold);
-    border-radius: 6px;
-    padding: 0.5rem 0.85rem;
-    font-size: 1.1rem;
-    cursor: pointer;
-    transition: background-color 0.2s ease, transform 0.1s ease;
-}
-
-.carousel-btn:hover {
-    background-color: var(--antique-gold);
-    color: var(--midnight-black);
-}
-
-.carousel-btn:active {
-    transform: scale(0.95);
+    display: none;
 }
 
 /* Crawling Ladybug on the Right Side */
