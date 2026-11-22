@@ -1,0 +1,186 @@
+:root {
+    --deep-burgundy: #710912;
+    --midnight-black: #0D0D0D;
+    --antique-gold: #C28D39;
+    --dark-espresso: #362822;
+    --warm-champagne: #EFE5D2;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--midnight-black);
+    color: var(--warm-champagne);
+    font-family: Georgia, 'Times New Roman', serif;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+}
+
+/* Header Navigation Bar */
+.nav {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1.5rem 2.5rem;
+    border-bottom: 1px solid var(--dark-espresso);
+}
+
+/* Centered, smaller logo at the top */
+#logo1 {
+    height: 110px;
+    width: auto;
+    display: block;
+    transition: transform 0.25s ease;
+}
+
+#logo1:hover {
+    transform: scale(1.03);
+}
+
+/* "About Us" button pinned to the top-right corner */
+.nav a[href="about.html"] {
+    position: absolute;
+    right: 2.5rem;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: var(--deep-burgundy);
+    color: var(--warm-champagne);
+    border: 1.5px solid var(--antique-gold);
+    padding: 0.65rem 1.35rem;
+    border-radius: 8px;
+    text-decoration: none;
+    font-size: 1rem;
+    letter-spacing: 0.5px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+    transition: background-color 0.2s ease, color 0.2s ease, transform 0.2s ease;
+}
+
+.nav a[href="about.html"]:hover {
+    background-color: var(--antique-gold);
+    color: var(--midnight-black);
+    transform: translateY(calc(-50% - 2px));
+}
+
+/* Optional subtle styling if Chrissy/Mya links are uncommented later */
+.nav a:not([href="about.html"]) {
+    color: var(--antique-gold);
+    text-decoration: none;
+    margin: 0 1rem;
+    font-size: 1rem;
+}
+
+.nav a:not([href="about.html"]):hover {
+    color: var(--warm-champagne);
+}
+
+/* Moving Ladybug generated purely in CSS (no extra HTML tags needed) */
+body::after {
+    content: "";
+    position: fixed;
+    right: 22px;
+    bottom: 5vh;
+    width: 22px;
+    height: 24px;
+    border-radius: 50%;
+    z-index: 999;
+    pointer-events: none;
+
+    /* Burgundy shell + center split line + spots */
+    background:
+        /* center line */
+        linear-gradient(to right, transparent 47%, var(--midnight-black) 47%, var(--midnight-black) 53%, transparent 53%),
+        /* spots */
+        radial-gradient(circle at 32% 30%, var(--midnight-black) 2.2px, transparent 2.5px),
+        radial-gradient(circle at 68% 30%, var(--midnight-black) 2.2px, transparent 2.5px),
+        radial-gradient(circle at 28% 62%, var(--midnight-black) 2.2px, transparent 2.5px),
+        radial-gradient(circle at 72% 62%, var(--midnight-black) 2.2px, transparent 2.5px),
+        /* shell base */
+        var(--deep-burgundy);
+
+    border: 1.5px solid var(--antique-gold);
+    box-shadow:
+        /* head on top edge */
+        0 -8px 0 -6px var(--midnight-black),
+        0 -8px 0 -5px var(--antique-gold),
+        /* left & right antennae */
+        -4px -13px 0 -9px var(--antique-gold),
+        4px -13px 0 -9px var(--antique-gold),
+        /* drop shadow */
+        0 4px 10px rgba(0, 0, 0, 0.75);
+
+    animation: crawlLadybugCSS 18s ease-in-out infinite;
+}
+
+@keyframes crawlLadybugCSS {
+    0% {
+        right: 22px;
+        bottom: 5vh;
+        transform: rotate(0deg);
+    }
+    15% {
+        right: 26px;
+        bottom: 30vh;
+        transform: rotate(-7deg);
+    }
+    30% {
+        right: 18px;
+        bottom: 58vh;
+        transform: rotate(6deg);
+    }
+    45% {
+        right: 24px;
+        bottom: 84vh;
+        transform: rotate(-4deg);
+    }
+    52% {
+        right: 24px;
+        bottom: 84vh;
+        transform: rotate(180deg);
+    }
+    70% {
+        right: 18px;
+        bottom: 52vh;
+        transform: rotate(173deg);
+    }
+    88% {
+        right: 26px;
+        bottom: 22vh;
+        transform: rotate(187deg);
+    }
+    96% {
+        right: 22px;
+        bottom: 5vh;
+        transform: rotate(180deg);
+    }
+    100% {
+        right: 22px;
+        bottom: 5vh;
+        transform: rotate(360deg);
+    }
+}
+
+/* Mobile responsiveness */
+@media (max-width: 600px) {
+    .nav {
+        flex-direction: column;
+        gap: 1rem;
+        padding: 1.25rem;
+    }
+
+    .nav a[href="about.html"] {
+        position: static;
+        transform: none;
+    }
+
+    .nav a[href="about.html"]:hover {
+        transform: translateY(-2px);
+    }
+
+    body::after {
+        right: 10px;
+    }
+}
