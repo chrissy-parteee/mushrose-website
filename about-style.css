@@ -106,7 +106,16 @@ h3 {
     color: var(--warm-champagne);
 }
 
-#heads {
+.indiv-about td h1 a {
+    color: var(--warm-champagne);
+    text-decoration: none;
+}
+
+.indiv-about td h1 a:hover {
+    color: var(--antique-gold);
+}
+
+.head-img {
     width: 145px;
     height: 145px;
     object-fit: cover;
@@ -117,7 +126,7 @@ h3 {
     transition: transform 0.25s ease;
 }
 
-#heads:hover {
+.head-img:hover {
     transform: scale(1.04);
 }
 
