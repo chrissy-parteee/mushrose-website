@@ -1,0 +1,255 @@
+:root {
+    --deep-burgundy: #710912;
+    --midnight-black: #0D0D0D;
+    --antique-gold: #C28D39;
+    --dark-espresso: #362822;
+    --warm-champagne: #EFE5D2;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--midnight-black);
+    color: var(--warm-champagne);
+    font-family: Georgia, 'Times New Roman', serif;
+    margin: 0;
+    padding: 2rem 1.5rem 4rem;
+    min-height: 100vh;
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1.25rem;
+}
+
+/* Main page logo & open-modal button */
+body > img {
+    width: 200px;
+    height: 150px;
+    object-fit: contain;
+    display: block;
+}
+
+.btn,
+.btn-open {
+    background-color: var(--deep-burgundy);
+    color: var(--warm-champagne);
+    border: 1.5px solid var(--antique-gold);
+    border-radius: 8px;
+    padding: 0.7rem 1.5rem;
+    font-family: Georgia, 'Times New Roman', serif;
+    font-size: 1rem;
+    letter-spacing: 0.5px;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.55);
+    transition: background-color 0.2s ease, color 0.2s ease, transform 0.2s ease;
+}
+
+.btn:hover,
+.btn-open:hover {
+    background-color: var(--antique-gold);
+    color: var(--midnight-black);
+    transform: translateY(-2px);
+}
+
+/* Backdrop Overlay */
+.overlay {
+    position: fixed;
+    inset: 0;
+    background-color: rgba(13, 13, 13, 0.82);
+    backdrop-filter: blur(3px);
+    z-index: 900;
+}
+
+/* Newsletter Modal Card */
+#modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: min(92vw, 480px);
+    background-color: var(--dark-espresso);
+    border: 2px solid var(--antique-gold);
+    border-radius: 12px;
+    padding: 1.75rem;
+    z-index: 950;
+    box-shadow: 0 14px 35px rgba(0, 0, 0, 0.75);
+}
+
+#modal .flex {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 1rem;
+    margin-bottom: 1.25rem;
+}
+
+#modal .flex img {
+    width: 140px;
+    height: auto;
+    object-fit: contain;
+}
+
+.close-modal {
+    background-color: var(--deep-burgundy);
+    color: var(--warm-champagne);
+    border: 1px solid var(--antique-gold);
+    border-radius: 6px;
+    padding: 0.35rem 0.75rem;
+    font-family: Georgia, 'Times New Roman', serif;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.close-modal:hover {
+    background-color: var(--antique-gold);
+    color: var(--midnight-black);
+}
+
+#modal h1 {
+    margin: 0 0 0.5rem 0;
+    color: var(--antique-gold);
+    border-bottom: 2px solid var(--deep-burgundy);
+    padding-bottom: 0.35rem;
+    font-size: 1.75rem;
+}
+
+#modal p {
+    margin: 0 0 1.25rem 0;
+    color: var(--warm-champagne);
+    font-size: 0.98rem;
+}
+
+/* Email Input & Subscribe Button */
+#modal input[type="email"] {
+    width: 100%;
+    padding: 0.7rem 0.9rem;
+    margin-bottom: 0.9rem;
+    background-color: var(--midnight-black);
+    color: var(--warm-champagne);
+    border: 1px solid var(--antique-gold);
+    border-radius: 6px;
+    font-family: Georgia, 'Times New Roman', serif;
+    font-size: 0.95rem;
+}
+
+#modal input[type="email"]::placeholder {
+    color: rgba(239, 229, 210, 0.55);
+}
+
+#modal input[type="email"]:focus {
+    outline: none;
+    border-color: var(--warm-champagne);
+}
+
+.subscribe-btn {
+    width: 100%;
+    background-color: var(--deep-burgundy);
+    color: var(--warm-champagne);
+    border: 1.5px solid var(--antique-gold);
+    border-radius: 8px;
+    padding: 0.7rem 1.25rem;
+    font-family: Georgia, 'Times New Roman', serif;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.subscribe-btn:hover {
+    background-color: var(--antique-gold);
+    color: var(--midnight-black);
+}
+
+/* Hidden state used for toggling modal & overlay in JS */
+.hidden {
+    display: none !important;
+}
+
+/* Moving Ladybug generated purely in CSS */
+body::after {
+    content: "";
+    position: fixed;
+    right: 22px;
+    bottom: 5vh;
+    width: 22px;
+    height: 24px;
+    border-radius: 50%;
+    z-index: 999;
+    pointer-events: none;
+
+    background:
+        linear-gradient(to right, transparent 47%, var(--midnight-black) 47%, var(--midnight-black) 53%, transparent 53%),
+        radial-gradient(circle at 32% 30%, var(--midnight-black) 2.2px, transparent 2.5px),
+        radial-gradient(circle at 68% 30%, var(--midnight-black) 2.2px, transparent 2.5px),
+        radial-gradient(circle at 28% 62%, var(--midnight-black) 2.2px, transparent 2.5px),
+        radial-gradient(circle at 72% 62%, var(--midnight-black) 2.2px, transparent 2.5px),
+        var(--deep-burgundy);
+
+    border: 1.5px solid var(--antique-gold);
+    box-shadow:
+        0 -8px 0 -6px var(--midnight-black),
+        0 -8px 0 -5px var(--antique-gold),
+        -4px -13px 0 -9px var(--antique-gold),
+        4px -13px 0 -9px var(--antique-gold),
+        0 4px 10px rgba(0, 0, 0, 0.75);
+
+    animation: crawlLadybugCSS 18s ease-in-out infinite;
+}
+
+@keyframes crawlLadybugCSS {
+    0% {
+        right: 22px;
+        bottom: 5vh;
+        transform: rotate(0deg);
+    }
+    15% {
+        right: 26px;
+        bottom: 30vh;
+        transform: rotate(-7deg);
+    }
+    30% {
+        right: 18px;
+        bottom: 58vh;
+        transform: rotate(6deg);
+    }
+    45% {
+        right: 24px;
+        bottom: 84vh;
+        transform: rotate(-4deg);
+    }
+    52% {
+        right: 24px;
+        bottom: 84vh;
+        transform: rotate(180deg);
+    }
+    70% {
+        right: 18px;
+        bottom: 52vh;
+        transform: rotate(173deg);
+    }
+    88% {
+        right: 26px;
+        bottom: 22vh;
+        transform: rotate(187deg);
+    }
+    96% {
+        right: 22px;
+        bottom: 5vh;
+        transform: rotate(180deg);
+    }
+    100% {
+        right: 22px;
+        bottom: 5vh;
+        transform: rotate(360deg);
+    }
+}
+
+@media (max-width: 600px) {
+    body::after {
+        right: 10px;
+    }
+}
