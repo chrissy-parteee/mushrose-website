@@ -6,6 +6,7 @@
     <title>Mushrose Studio</title>
     <link rel="icon" type="image/svg+xml" href="images/mushrose-fav.svg">
     <link rel="stylesheet" href="index-style.css">
+    <link rel="stylesheet" href="newsletter.css">
 </head>
 <body>
     <div class="nav">
@@ -15,12 +16,30 @@
         <a href="about.html">About Us</a>
     </div>
 
-    <h2><pre>
-        WE STILL HAVE TO FIGURE OUT 
-        WHATS ACTUALLY GOING TO GO HERE. 
+    <main class="home-content">
+        <p class="placeholder-note">
+            WE STILL HAVE TO FIGURE OUT WHATS ACTUALLY GOING TO GO HERE.<br><br>
+            THE FINAL PROJECT WILL HAVE A BLOG POSTS AND A SIGN UP FORM
+        </p>
 
-        THE FINAL PROJECT WILL HAVE A BLOG POSTS
-        AND A SIGN UP FORM
-    </pre></h2>
+        <button class="btn btn-open" id="btn-open">Subscribe</button>
+    </main>
+
+    <section id="modal" class="modal hidden">
+        <div class="flex">
+            <img src="./images/mushrose-logo2.png" width="330px" height="220px" alt="Mushrose Studio logo">
+            <button id="close-modal" class="close-modal">Close</button>
+        </div>
+        <div>
+            <h1>Stay Connected!</h1>
+            <p>Stay updated with the latest news from Mushrose Studio.</p>
+            <input type="email" name="email" placeholder="Enter your email" required>
+            <button class="subscribe-btn" id="btnsubs">Subscribe</button>
+        </div>
+    </section>
+
+    <div class="overlay hidden" id="overlay"></div>
+
+    <script src="newsletter.js"></script>
 </body>
 </html>
